@@ -10,7 +10,7 @@
 >
   <head>
     <meta charset="utf-8" />
-    <title>BMTF | Sliders</title>
+    <title>BMTF | Clients</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta
       content="Premium Multipurpose Admin & Dashboard Template"
@@ -405,34 +405,23 @@
               <div class="col-lg-3">
                 <div class="card p-4">
                   <div class="mb-4">
-                    <h2>Edit Slider</h2>
+                    <h2>Edit Client</h2>
                   </div>
                   <form action="">
                     <div class="row">
                       <div class="col-lg-12">
                         <div class="mb-3">
-                          <label class="form-label">Title</label>
+                          <label class="form-label">Client Name</label>
                           <input
                             type="text"
                             class="form-control"
-                            placeholder="Enter Title"
+                            placeholder="Enter Client Name"
                           />
                         </div>
                       </div>
                       <div class="col-lg-12">
                         <div class="mb-3">
-                          <label class="form-label">Description</label>
-                          <textarea
-                            class="form-control"
-                            placeholder="Enter Description"
-                            id=""
-                            rows="4"
-                          ></textarea>
-                        </div>
-                      </div>
-                      <div class="col-lg-12">
-                        <div class="mb-3">
-                          <label class="form-label">Video/Image</label>
+                          <label class="form-label">Client Logo</label>
                           <input
                             type="file"
                             placeholder="Upload Your File"
@@ -459,9 +448,9 @@
               <div class="col-lg-9">
                 <div class="card p-4">
                   <div id="customerList">
-                    <div class="col-sm-auto">
-                      <div class="row">
-                        <div class="col-3">
+                    <div class="row g-4 mb-3">
+                      <div class="col-sm-auto">
+                        <div class="">
                           <div class="search-box ms-2">
                             <input
                               type="text"
@@ -470,6 +459,19 @@
                             />
                             <i class="ri-search-line search-icon"></i>
                           </div>
+                        </div>
+                      </div>
+                      <div class="col-sm">
+                        <div class="d-flex justify-content-sm-end">
+                          <button
+                            type="button"
+                            class="btn btn-success add-btn"
+                            data-bs-toggle="modal"
+                            data-bs-target="#institutionAddModal"
+                          >
+                            <i class="ri-add-line align-bottom me-1"></i> Add
+                            Client
+                          </button>
                         </div>
                       </div>
                     </div>
@@ -482,9 +484,8 @@
                         <thead class="table-light">
                           <tr>
                             <th class="sort">#</th>
-                            <th class="sort">Title</th>
-                            <th class="sort">Description</th>
-                            <th class="sort">File</th>
+                            <th class="sort">Client Name</th>
+                            <th class="sort">Client Logo File</th>
                             <th class="sort" style="float: inline-end">
                               Action
                             </th>
@@ -493,18 +494,8 @@
                         <tbody class="list form-check-all">
                           <tr>
                             <td>1</td>
-                            <td class="searchfield1">
-                              Empowering Innovation, Precision, And Excellence
-                            </td>
-                            <td class="searchfield2">
-                              BMTF offers a wide range of versatile
-                              capabilities, spanning from manufacturing
-                              machinery, military equipment, and furniture to
-                              healthcare products and services like galvanizing
-                              and electronic assembly, all characterized by a
-                              commitment to innovation and precision.
-                            </td>
-                            <td class="searchfield3">file.mp4</td>
+                            <td class="searchfield1">Bangladesh Army</td>
+                            <td class="searchfield3">file.pdf</td>
                             <td>
                               <div class="d-flex justify-content-end">
                                 <div class="edit">
@@ -520,18 +511,8 @@
                           </tr>
                           <tr>
                             <td>2</td>
-                            <td class="searchfield1 textEllip1">
-                              Empowering Innovation, Precision, And Excellence
-                            </td>
-                            <td class="searchfield2 textEllip2">
-                              BMTF offers a wide range of versatile
-                              capabilities, spanning from manufacturing
-                              machinery, military equipment, and furniture to
-                              healthcare products and services like galvanizing
-                              and electronic assembly, all characterized by a
-                              commitment to innovation and precision.
-                            </td>
-                            <td class="searchfield3">file.mp4</td>
+                            <td class="searchfield1">Bangladesh Navy</td>
+                            <td class="searchfield3">file.pdf</td>
                             <td>
                               <div class="d-flex justify-content-end">
                                 <div class="edit">
@@ -574,60 +555,6 @@
                       </div>
                     </div>
                   </div>
-                </div>
-              </div>
-              <div class="col-lg-12">
-                <div class="card p-4">
-                  <div class="mb-4">
-                    <h2>Add Slider</h2>
-                  </div>
-                  <form action="">
-                    <div class="row">
-                      <div class="col-lg-6">
-                        <div class="mb-3">
-                          <label class="form-label">Title</label>
-                          <input
-                            type="text"
-                            class="form-control"
-                            placeholder="Enter Title"
-                          />
-                        </div>
-                      </div>
-                      <div class="col-lg-6">
-                        <div class="mb-3">
-                          <label class="form-label">Video/Image</label>
-                          <input
-                            type="file"
-                            placeholder="Upload Your File"
-                            class="form-control"
-                          />
-                        </div>
-                      </div>
-                      <div class="col-lg-12">
-                        <div class="mb-3">
-                          <label class="form-label">Description</label>
-                          <textarea
-                            class="form-control"
-                            placeholder="Enter Description"
-                            id=""
-                            rows="4"
-                          ></textarea>
-                        </div>
-                      </div>
-                    </div>
-                    <div class="col-lg-12">
-                      <div class="d-flex justify-content-center">
-                        <div>
-                          <button
-                            type="submit"
-                            class="btn btn-primary px-5 mx-1"
-                          >
-                            Add
-                          </button>
-                        </div>
-                      </div>
-                    </div>
-                  </form>
                 </div>
               </div>
             </div>
@@ -703,17 +630,5 @@
 
     <!-- App js -->
     <script src="assets/js/app.js"></script>
-
-    <script>
-      $(document).ready(function () {
-        $("select").selectize({
-          sortField: "text",
-        });
-      });
-
-      $(function () {
-        $("[rel='tooltip']").tooltip();
-      });
-    </script>
   </body>
 </html>
