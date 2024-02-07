@@ -10,7 +10,7 @@
 >
   <head>
     <meta charset="utf-8" />
-    <title>BMTF | User</title>
+    <title>BMTF | Projects</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta
       content="Premium Multipurpose Admin & Dashboard Template"
@@ -402,167 +402,140 @@
         <div class="page-content">
           <div class="container-fluid">
             <div class="row">
-              <div class="col-lg-3">
-                <div class="card p-4">
-                  <div class="mb-4">
-                    <h2>Add User</h2>
+              <div class="col-lg-12">
+                <div class="card">
+                  <div class="card-header">
+                    <h4 class="card-title mb-0">All Projects</h4>
                   </div>
-                  <form action="">
-                    <div class="row">
-                      <div class="col-lg-12">
-                        <div class="mb-3">
-                          <label class="form-label">Name</label>
-                          <input
-                            type="text"
-                            class="form-control"
-                            placeholder="Enter Name"
-                          />
+                  <!-- end card header -->
+
+                  <div class="card-body">
+                    <div id="customerList">
+                      <div class="row g-4 mb-3">
+                        <div class="col-sm-auto">
+                          <div class="">
+                            <div class="search-box ms-2">
+                              <input
+                                type="text"
+                                class="form-control search"
+                                placeholder="Search..."
+                              />
+                              <i class="ri-search-line search-icon"></i>
+                            </div>
+                          </div>
                         </div>
-                      </div>
-                      <div class="col-lg-12">
-                        <div class="mb-3">
-                          <label class="form-label">Email</label>
-                          <input
-                            type="email"
-                            placeholder="Enter Email"
-                            class="form-control"
-                          />
-                        </div>
-                      </div>
-                      <div class="col-lg-12">
-                        <div class="mb-3">
-                          <label class="form-label">Password</label>
-                          <input
-                            type="password"
-                            placeholder="Enter Password"
-                            class="form-control"
-                          />
-                        </div>
-                      </div>
-                    </div>
-                    <div class="col-lg-12">
-                      <div class="d-flex justify-content-center">
-                        <div>
-                          <button
-                            type="submit"
-                            class="btn btn-primary px-5 mx-1"
-                          >
-                            Add
-                          </button>
-                        </div>
-                      </div>
-                    </div>
-                  </form>
-                </div>
-              </div>
-              <div class="col-lg-9">
-                <div class="card p-4">
-                  <div id="customerList">
-                    <div class="col-sm-auto">
-                      <div class="row">
-                        <div class="col-3">
-                          <div class="search-box ms-2">
-                            <input
-                              type="text"
-                              class="form-control search"
-                              placeholder="Search..."
-                            />
-                            <i class="ri-search-line search-icon"></i>
+                        <div class="col-sm">
+                          <div class="d-flex justify-content-sm-end">
+                            <button
+                              type="button"
+                              class="btn btn-success add-btn"
+                              data-bs-toggle="modal"
+                              data-bs-target="#institutionAddModal"
+                            >
+                              <i class="ri-add-line align-bottom me-1"></i> Add
+                              Project
+                            </button>
                           </div>
                         </div>
                       </div>
-                    </div>
 
-                    <div class="table-responsive table-card mt-3 mb-1 px-3">
-                      <table
-                        class="table align-middle table-nowrap"
-                        id="customerTable"
-                      >
-                        <thead class="table-light">
-                          <tr>
-                            <th class="sort">Name</th>
-                            <th class="sort">Email</th>
-                            <th class="sort">Status</th>
-                            <th class="sort" style="float: inline-end">
-                              Action
-                            </th>
-                          </tr>
-                        </thead>
-                        <tbody class="list form-check-all">
-                          <tr>
-                            <td class="searchfield1">Arif Bipu</td>
-                            <td class="searchfield2">bipu@gmail.com</td>
-                            <td class="searchfield5">
-                              <span
-                                class="badge badge-soft-danger text-uppercase"
-                                >Disabled</span
-                              >
-                            </td>
-                            <td>
-                              <div class="d-flex justify-content-end">
-                                <div class="edit">
-                                  <button
-                                    class="btn btn-sm btn-success edit-item-btn d-flex align-items-center gap-1"
-                                    data-bs-toggle="modal"
-                                    data-bs-target="#user-edit-Modal"
-                                  >
-                                    <i class="las la-pencil-alt"></i
-                                    ><span>Edit</span>
-                                  </button>
+                      <div class="table-responsive table-card mt-3 mb-1">
+                        <table
+                          class="table align-middle table-nowrap"
+                          id="customerTable"
+                        >
+                          <thead class="table-light">
+                            <tr>
+                              <th class="sort">#</th>
+                              <th class="sort">Title</th>
+                              <th class="sort">Feature Image</th>
+                              <th class="sort">Date</th>
+                              <th class="sort">Status</th>
+                              <th class="sort" style="float: inline-end">
+                                Action
+                              </th>
+                            </tr>
+                          </thead>
+                          <tbody class="list form-check-all">
+                            <tr>
+                              <td>1</td>
+                              <td class="searchfield1">Project 1</td>
+                              <td>
+                                <div>
+                                  <img
+                                    style="width: 50px"
+                                    src="assets/images/mac-img.png"
+                                    alt="project 1"
+                                  />
                                 </div>
-                              </div>
-                            </td>
-                          </tr>
-                          <tr>
-                            <td class="searchfield1">Arif Bipu</td>
-                            <td class="searchfield2">bipu@gmail.com</td>
-                            <td class="searchfield5">
-                              <span
-                                class="badge badge-soft-danger text-uppercase"
-                                >Disabled</span
-                              >
-                            </td>
-                            <td>
-                              <div class="d-flex justify-content-end">
-                                <div class="edit">
-                                  <button
-                                    class="btn btn-sm btn-success edit-item-btn d-flex align-items-center gap-1"
-                                    data-bs-toggle="modal"
-                                    data-bs-target="#user-edit-Modal"
-                                  >
-                                    <i class="las la-pencil-alt"></i
-                                    ><span>Edit</span>
-                                  </button>
+                              </td>
+                              <td class="searchfield2">02-05-2024</td>
+                              <td class="searchfield3">
+                                <span
+                                  class="badge badge-soft-success text-uppercase"
+                                  >Active</span
+                                >
+                              </td>
+                              <td>
+                                <div class="d-flex gap-2 justify-content-end">
+                                  <div class="view">
+                                    <button
+                                      class="btn btn-sm btn-primary edit-item-btn d-flex align-items-center gap-1"
+                                      data-bs-toggle="modal"
+                                      data-bs-target="#institutionModal"
+                                    >
+                                      <i class="las la-eye"></i
+                                      ><span>View</span>
+                                    </button>
+                                  </div>
+                                  <div class="edit">
+                                    <button
+                                      class="btn btn-sm btn-success edit-item-btn d-flex align-items-center gap-1"
+                                      data-bs-toggle="modal"
+                                      data-bs-target="#institutionModal"
+                                    >
+                                      <i class="las la-pencil-alt"></i
+                                      ><span>Edit</span>
+                                    </button>
+                                  </div>
                                 </div>
-                              </div>
-                            </td>
-                          </tr>
-                        </tbody>
-                      </table>
-                      <div class="noresult" style="display: none">
-                        <div class="text-center">
-                          <lord-icon
-                            src="https://cdn.lordicon.com/msoeawqm.json"
-                            trigger="loop"
-                            colors="primary:#121331,secondary:#08a88a"
-                            style="width: 75px; height: 75px"
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                        <div class="noresult" style="display: none">
+                          <div class="text-center">
+                            <lord-icon
+                              src="https://cdn.lordicon.com/msoeawqm.json"
+                              trigger="loop"
+                              colors="primary:#121331,secondary:#08a88a"
+                              style="width: 75px; height: 75px"
+                            >
+                            </lord-icon>
+                            <h5 class="mt-2">Sorry! No Result Found</h5>
+                          </div>
+                        </div>
+                      </div>
+
+                      <div class="d-flex justify-content-end">
+                        <div class="pagination-wrap hstack gap-2">
+                          <a
+                            class="page-item pagination-prev disabled"
+                            href="#"
                           >
-                          </lord-icon>
-                          <h5 class="mt-2">Sorry! No Result Found</h5>
+                            Previous
+                          </a>
+                          <ul class="pagination listjs-pagination mb-0"></ul>
+                          <a class="page-item pagination-next" href="#">
+                            Next
+                          </a>
                         </div>
                       </div>
                     </div>
-                    <div class="d-flex justify-content-end">
-                      <div class="pagination-wrap hstack gap-2">
-                        <a class="page-item pagination-prev disabled" href="#">
-                          Previous
-                        </a>
-                        <ul class="pagination listjs-pagination mb-0"></ul>
-                        <a class="page-item pagination-next" href="#"> Next </a>
-                      </div>
-                    </div>
                   </div>
+                  <!-- end card -->
                 </div>
+                <!-- end col -->
               </div>
             </div>
           </div>
@@ -637,5 +610,17 @@
 
     <!-- App js -->
     <script src="assets/js/app.js"></script>
+
+    <script>
+      $(document).ready(function () {
+        $("select").selectize({
+          sortField: "text",
+        });
+      });
+
+      $(function () {
+        $("[rel='tooltip']").tooltip();
+      });
+    </script>
   </body>
 </html>

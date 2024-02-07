@@ -405,17 +405,27 @@
               <div class="col-lg-3">
                 <div class="card p-4">
                   <div class="mb-4">
-                    <h2>Edit Career</h2>
+                    <h2>Add Career</h2>
                   </div>
                   <form action="">
                     <div class="row">
                       <div class="col-lg-12">
                         <div class="mb-3">
-                          <label class="form-label">Job Name</label>
+                          <label class="form-label">Job Post Title</label>
                           <input
                             type="text"
                             class="form-control"
-                            placeholder="Enter Job Name"
+                            placeholder="Enter Job Post Title"
+                          />
+                        </div>
+                      </div>
+                      <div class="col-lg-12">
+                        <div class="mb-3">
+                          <label class="form-label">Capacity</label>
+                          <input
+                            type="number"
+                            class="form-control"
+                            placeholder="Enter Capacity"
                           />
                         </div>
                       </div>
@@ -431,7 +441,7 @@
                       </div>
                       <div class="col-lg-12">
                         <div class="mb-3">
-                          <label class="form-label">Date of Post</label>
+                          <label class="form-label">Upload Date</label>
                           <input
                             type="date"
                             class="form-control"
@@ -441,7 +451,7 @@
                       </div>
                       <div class="col-lg-12">
                         <div class="mb-3">
-                          <label class="form-label">Deadline</label>
+                          <label class="form-label">Application Deadline</label>
                           <input
                             type="date"
                             class="form-control"
@@ -451,12 +461,33 @@
                       </div>
                       <div class="col-lg-12">
                         <div class="mb-3">
-                          <label class="form-label">Circular File</label>
+                          <label class="form-label">File</label>
                           <input
                             type="file"
                             placeholder="Upload Your File"
                             class="form-control"
                           />
+                        </div>
+                      </div>
+                      <div class="col-lg-12">
+                        <div class="mb-3">
+                          <label
+                            for=""
+                            class="form-label d-flex align-items-center"
+                            >Status
+                            <i
+                              class="las la-question-circle tooltip-icon mx-1"
+                              data-bs-toggle="tooltip"
+                              data-bs-placement="top"
+                              title="Status"
+                              rel="tooltip"
+                            ></i
+                          ></label>
+                          <select id="" placeholder="Choose Status">
+                            <option value="">Select a status...</option>
+                            <option>Active</option>
+                            <option>Disable</option>
+                          </select>
                         </div>
                       </div>
                     </div>
@@ -467,7 +498,7 @@
                             type="submit"
                             class="btn btn-primary px-5 mx-1"
                           >
-                            Edit
+                            ADD
                           </button>
                         </div>
                       </div>
@@ -491,19 +522,6 @@
                           </div>
                         </div>
                       </div>
-                      <div class="col-sm">
-                        <div class="d-flex justify-content-sm-end">
-                          <button
-                            type="button"
-                            class="btn btn-success add-btn"
-                            data-bs-toggle="modal"
-                            data-bs-target="#institutionAddModal"
-                          >
-                            <i class="ri-add-line align-bottom me-1"></i> Add
-                            Career
-                          </button>
-                        </div>
-                      </div>
                     </div>
 
                     <div class="table-responsive table-card mt-3 mb-1 px-3">
@@ -514,11 +532,12 @@
                         <thead class="table-light">
                           <tr>
                             <th class="sort">#</th>
-                            <th class="sort">Job Post</th>
+                            <th class="sort">Title</th>
+                            <th class="sort">Capacity</th>
                             <th class="sort">Department</th>
-                            <th class="sort">Date of Post</th>
                             <th class="sort">Deadline</th>
-                            <th class="sort">Attachment</th>
+                            <th class="sort">File</th>
+                            <th class="sort">Status</th>
                             <th class="sort" style="float: inline-end">
                               Action
                             </th>
@@ -528,10 +547,16 @@
                           <tr>
                             <td>1</td>
                             <td class="searchfield1">Dev Ops</td>
-                            <td class="searchfield2">BMTF</td>
-                            <td class="searchfield3">17-10-2023</td>
+                            <td class="searchfield2">10</td>
+                            <td class="searchfield3">BMTF</td>
                             <td class="searchfield4">17-10-2024</td>
-                            <td class="searchfield5">file.pdf</td>
+                            <td>file.pdf</td>
+                            <td class="searchfield5">
+                              <span
+                                class="badge badge-soft-danger text-uppercase"
+                                >Disable</span
+                              >
+                            </td>
                             <td>
                               <div class="d-flex justify-content-end">
                                 <div class="edit">
@@ -547,11 +572,17 @@
                           </tr>
                           <tr>
                             <td>2</td>
-                            <td class="searchfield1">Front End</td>
-                            <td class="searchfield2">BMTF</td>
-                            <td class="searchfield3">17-10-2023</td>
+                            <td class="searchfield1">Dev Ops</td>
+                            <td class="searchfield2">10</td>
+                            <td class="searchfield3">BMTF</td>
                             <td class="searchfield4">17-10-2024</td>
-                            <td class="searchfield5">file.pdf</td>
+                            <td>file.pdf</td>
+                            <td class="searchfield5">
+                              <span
+                                class="badge badge-soft-success text-uppercase"
+                                >Active</span
+                              >
+                            </td>
                             <td>
                               <div class="d-flex justify-content-end">
                                 <div class="edit">
@@ -577,10 +608,6 @@
                           >
                           </lord-icon>
                           <h5 class="mt-2">Sorry! No Result Found</h5>
-                          <p class="text-muted mb-0">
-                            We've searched more than 150+ Orders We did not find
-                            any orders for you search.
-                          </p>
                         </div>
                       </div>
                     </div>
@@ -669,5 +696,17 @@
 
     <!-- App js -->
     <script src="assets/js/app.js"></script>
+
+    <script>
+      $(document).ready(function () {
+        $("select").selectize({
+          sortField: "text",
+        });
+      });
+
+      $(function () {
+        $("[rel='tooltip']").tooltip();
+      });
+    </script>
   </body>
 </html>

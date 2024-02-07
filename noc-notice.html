@@ -405,7 +405,7 @@
               <div class="col-lg-3">
                 <div class="card p-4">
                   <div class="mb-4">
-                    <h2>Edit NOC & Notice</h2>
+                    <h2>ADD NOC & Notice</h2>
                   </div>
                   <form action="">
                     <div class="row">
@@ -457,7 +457,7 @@
                             type="submit"
                             class="btn btn-primary px-5 mx-1"
                           >
-                            Edit
+                            ADD
                           </button>
                         </div>
                       </div>
@@ -481,19 +481,6 @@
                           </div>
                         </div>
                       </div>
-                      <div class="col-sm">
-                        <div class="d-flex justify-content-sm-end">
-                          <button
-                            type="button"
-                            class="btn btn-success add-btn"
-                            data-bs-toggle="modal"
-                            data-bs-target="#institutionAddModal"
-                          >
-                            <i class="ri-add-line align-bottom me-1"></i> Add
-                            NOC & Notice
-                          </button>
-                        </div>
-                      </div>
                     </div>
 
                     <div class="table-responsive table-card mt-3 mb-1 px-3">
@@ -508,6 +495,7 @@
                             <th class="sort">Issued Authority</th>
                             <th class="sort">Date</th>
                             <th class="sort">File</th>
+                            <td class="sort">Status</td>
                             <th class="sort" style="float: inline-end">
                               Action
                             </th>
@@ -522,6 +510,12 @@
                             </td>
                             <td>17-10-2023</td>
                             <td class="searchfield3">file.pdf</td>
+                            <td class="searchfield5">
+                              <span
+                                class="badge badge-soft-danger text-uppercase"
+                                >Disable</span
+                              >
+                            </td>
                             <td>
                               <div class="d-flex justify-content-end">
                                 <div class="edit">
@@ -543,6 +537,12 @@
                             </td>
                             <td>29-08-2023</td>
                             <td class="searchfield3">file.pdf</td>
+                            <td class="searchfield5">
+                              <span
+                                class="badge badge-soft-success text-uppercase"
+                                >Active</span
+                              >
+                            </td>
                             <td>
                               <div class="d-flex justify-content-end">
                                 <div class="edit">
@@ -568,10 +568,6 @@
                           >
                           </lord-icon>
                           <h5 class="mt-2">Sorry! No Result Found</h5>
-                          <p class="text-muted mb-0">
-                            We've searched more than 150+ Orders We did not find
-                            any orders for you search.
-                          </p>
                         </div>
                       </div>
                     </div>

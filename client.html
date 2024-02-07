@@ -405,7 +405,7 @@
               <div class="col-lg-3">
                 <div class="card p-4">
                   <div class="mb-4">
-                    <h2>Edit Client</h2>
+                    <h2>ADD Client</h2>
                   </div>
                   <form action="">
                     <div class="row">
@@ -437,7 +437,7 @@
                             type="submit"
                             class="btn btn-primary px-5 mx-1"
                           >
-                            Edit
+                            ADD
                           </button>
                         </div>
                       </div>
@@ -461,19 +461,6 @@
                           </div>
                         </div>
                       </div>
-                      <div class="col-sm">
-                        <div class="d-flex justify-content-sm-end">
-                          <button
-                            type="button"
-                            class="btn btn-success add-btn"
-                            data-bs-toggle="modal"
-                            data-bs-target="#institutionAddModal"
-                          >
-                            <i class="ri-add-line align-bottom me-1"></i> Add
-                            Client
-                          </button>
-                        </div>
-                      </div>
                     </div>
 
                     <div class="table-responsive table-card mt-3 mb-1 px-3">
@@ -484,8 +471,9 @@
                         <thead class="table-light">
                           <tr>
                             <th class="sort">#</th>
-                            <th class="sort">Client Name</th>
-                            <th class="sort">Client Logo File</th>
+                            <th class="sort">Name</th>
+                            <th class="sort">Logo</th>
+                            <th class="sort">Status</th>
                             <th class="sort" style="float: inline-end">
                               Action
                             </th>
@@ -495,24 +483,21 @@
                           <tr>
                             <td>1</td>
                             <td class="searchfield1">Bangladesh Army</td>
-                            <td class="searchfield3">file.pdf</td>
                             <td>
-                              <div class="d-flex justify-content-end">
-                                <div class="edit">
-                                  <button
-                                    class="btn btn-sm btn-success edit-item-btn d-flex align-items-center gap-1"
-                                  >
-                                    <i class="las la-pencil-alt"></i
-                                    ><span>Edit</span>
-                                  </button>
-                                </div>
+                              <div>
+                                <img
+                                  style="width: 50px"
+                                  src="assets/images/mac-img.png"
+                                  alt="project 1"
+                                />
                               </div>
                             </td>
-                          </tr>
-                          <tr>
-                            <td>2</td>
-                            <td class="searchfield1">Bangladesh Navy</td>
-                            <td class="searchfield3">file.pdf</td>
+                            <td class="searchfield2">
+                              <span
+                                class="badge badge-soft-success text-uppercase"
+                                >Active</span
+                              >
+                            </td>
                             <td>
                               <div class="d-flex justify-content-end">
                                 <div class="edit">
@@ -538,10 +523,6 @@
                           >
                           </lord-icon>
                           <h5 class="mt-2">Sorry! No Result Found</h5>
-                          <p class="text-muted mb-0">
-                            We've searched more than 150+ Orders We did not find
-                            any orders for you search.
-                          </p>
                         </div>
                       </div>
                     </div>
